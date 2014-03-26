@@ -1,0 +1,44 @@
+{
+  "name": "carcass-program",
+  "version": "0.0.1",
+  "description": "(Node.js) A simple wrap of commander.js, plus some tools and examples, in Carcass style.",
+  "author": {
+    "name": "devo.ps",
+    "email": "info@devo.ps",
+    "url": "https://github.com/devo-ps"
+  },
+  "contributors": [],
+  "keywords": [
+    "carcass",
+    "program"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devo-ps/carcass-program.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devo-ps/carcass-program/issues"
+  },
+  "homepage": "https://github.com/devo-ps/carcass-program",
+  "dependencies": {
+    "carcass": "~0.10.1",
+    "carcass-config": "~0.0.1",
+    "commander": "~2.1.0",
+    "debug": "*"
+  },
+  "devDependencies": {
+    "carcass-monitor": "latest",
+    "express": "latest",
+    "gulp": "latest",
+    "gulp-coffee": "latest",
+    "gulp-coffeelint": "latest",
+    "gulp-jshint": "latest",
+    "gulp-mocha": "latest",
+    "gulp-util": "latest",
+    "jshint-stylish": "latest",
+    "should": "latest",
+    "supertest": "latest"
+  },
+  "scripts": {}
+}
