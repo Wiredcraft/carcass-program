@@ -1,0 +1,10 @@
+{
+    "http": {
+        "dev": true,
+        "port": 3210
+    },
+    "theFile": {
+        "filename": "lorem.md",
+        "content": "Lorem ipsum dolor sit amet"
+    }
+}
