@@ -10,7 +10,8 @@
   "contributors": [],
   "keywords": [
     "carcass",
-    "program"
+    "program",
+    "commander"
   ],
   "license": "MIT",
   "repository": {
