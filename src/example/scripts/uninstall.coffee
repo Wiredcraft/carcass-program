@@ -34,5 +34,5 @@ script.uninstallFS = (done) ->
     manager = @configManager()
     conf = manager.get('theFile')
     return if not conf.filename?
-    filename = path.resolve(__dirname, '..', 'test', conf.filename)
+    filename = path.resolve(__dirname, '../../test', conf.filename)
     fs.unlink(filename, done)

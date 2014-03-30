@@ -1,6 +1,6 @@
 var debug, fs, lib, path, script;
 
-debug = require('debug')('carcass:script:uninstall');
+debug = require('debug')('carcass:script:install');
 
 lib = require('../');
 
@@ -10,12 +10,12 @@ fs = require('fs');
 
 
 /**
- * Uninstall.
+ * Install.
  *
  * Just an example.
  */
 
-module.exports = script = lib.getConsumer('Script', 'uninstall');
+module.exports = script = lib.getConsumer('Script', 'install');
 
 
 /**
@@ -26,7 +26,7 @@ script.start = function(program, done) {
   var stream;
   stream = this._run([
     {
-      handler: 'uninstallFS',
+      handler: 'installFS',
       callback: true
     }
   ]);
@@ -47,13 +47,13 @@ script.start = function(program, done) {
  * Task.
  */
 
-script.uninstallFS = function(done) {
-  var conf, filename, manager;
+script.installFS = function(done) {
+  var conf, filename, manager, _ref;
   manager = this.configManager();
   conf = manager.get('theFile');
   if (conf.filename == null) {
     return;
   }
-  filename = path.resolve(__dirname, '..', 'test', conf.filename);
-  return fs.unlink(filename, done);
+  filename = path.resolve(__dirname, '../../test', conf.filename);
+  return fs.writeFile(filename, (_ref = conf.content) != null ? _ref : '', done);
 };

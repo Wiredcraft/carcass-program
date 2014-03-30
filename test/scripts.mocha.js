@@ -2,7 +2,7 @@
 
 // var should = require('should');
 var path = require('path');
-var dir = path.resolve(__dirname, '..');
+var dir = path.resolve(__dirname, '../example');
 var Monitor = require('carcass-monitor');
 var fs = require('fs');
 
