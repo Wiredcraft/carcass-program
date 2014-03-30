@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "description": "(Node.js) A simple wrap of commander.js, plus some tools and examples, in Carcass style.",
   "author": {
-    "name": "devo.ps",
-    "email": "info@devo.ps",
-    "url": "https://github.com/devo-ps"
+    "name": "Wiredcraft",
+    "email": "info@wiredcraft.com",
+    "url": "http://wiredcraft.com"
   },
-  "contributors": [],
+  "contributors": [
+    "Makara Wang"
+  ],
   "keywords": [
     "carcass",
     "program",
@@ -16,16 +18,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devo-ps/carcass-program.git"
+    "url": "https://github.com/Wiredcraft/carcass-program.git"
   },
   "bugs": {
-    "url": "https://github.com/devo-ps/carcass-program/issues"
+    "url": "https://github.com/Wiredcraft/carcass-program/issues"
   },
-  "homepage": "https://github.com/devo-ps/carcass-program",
+  "homepage": "https://github.com/Wiredcraft/carcass-program",
   "dependencies": {
     "carcass": "~0.10.1",
     "carcass-config": "~0.0.1",
-    "commander": "~2.1.0",
+    "commander": "~2.2.0",
     "debug": "*"
   },
   "devDependencies": {
