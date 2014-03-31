@@ -1,4 +1,4 @@
-var debug, express, http, lib, server;
+var bodyParser, debug, errorhandler, express, http, lib, logger, server;
 
 debug = require('debug')('carcass:server:http');
 
@@ -7,6 +7,12 @@ lib = require('../');
 http = require('http');
 
 express = require('express');
+
+logger = require('morgan');
+
+bodyParser = require('body-parser');
+
+errorhandler = require('errorhandler');
 
 
 /**
@@ -52,15 +58,12 @@ server.app = function() {
   app = express();
   config = this.config();
   if ((config != null ? config.dev : void 0) != null) {
-    app.use(express.logger({
-      format: 'dev'
-    }));
+    app.use(logger('dev'));
   }
-  app.use(express.json());
-  app.use(express.urlencoded());
+  app.use(bodyParser());
   app.get('/ping', function(req, res) {
     return res.json('pong');
   });
-  app.use(express.errorHandler());
+  app.use(errorhandler());
   return app;
 };
