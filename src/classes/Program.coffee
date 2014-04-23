@@ -2,7 +2,6 @@ debug = require('debug')('carcass:program')
 
 carcass = require('carcass')
 config = require('carcass-config')
-_ = carcass.highland
 Command = require('commander').Command
 
 ###*
@@ -62,14 +61,12 @@ module.exports = class Program
      * Boot everything.
     ###
     bootstrap: (done = ->) ->
-        stream = @_run([
+        @_run([
             'bootCommand'
             'bootProcess'
             { handler: 'bootConfig', callback: true }
             { handler: 'bootScript', callback: true }
-        ])
-        stream.on('error', done)
-        stream.toArray((res) -> done(null, res))
+        ]).on('error', done).toArray((res) -> done(null, res))
         return @
 
     ###*

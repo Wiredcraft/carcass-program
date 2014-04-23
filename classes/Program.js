@@ -1,12 +1,10 @@
-var Command, Program, carcass, config, debug, _;
+var Command, Program, carcass, config, debug;
 
 debug = require('debug')('carcass:program');
 
 carcass = require('carcass');
 
 config = require('carcass-config');
-
-_ = carcass.highland;
 
 Command = require('commander').Command;
 
@@ -83,11 +81,10 @@ module.exports = Program = (function() {
    */
 
   Program.prototype.bootstrap = function(done) {
-    var stream;
     if (done == null) {
       done = function() {};
     }
-    stream = this._run([
+    this._run([
       'bootCommand', 'bootProcess', {
         handler: 'bootConfig',
         callback: true
@@ -95,9 +92,7 @@ module.exports = Program = (function() {
         handler: 'bootScript',
         callback: true
       }
-    ]);
-    stream.on('error', done);
-    stream.toArray(function(res) {
+    ]).on('error', done).toArray(function(res) {
       return done(null, res);
     });
     return this;

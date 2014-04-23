@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/Wiredcraft/carcass-program",
   "dependencies": {
-    "carcass": ">=0.10.1",
-    "carcass-config": ">=0.0.1",
+    "carcass": "~0.11.0",
+    "carcass-config": "~0.2.0",
     "commander": "2.x",
     "debug": "*"
   },
