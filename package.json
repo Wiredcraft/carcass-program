@@ -1,6 +1,6 @@
 {
   "name": "carcass-program",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "(Node.js) A simple wrap of commander.js, plus some tools and examples, in Carcass style.",
   "author": {
     "name": "Wiredcraft",
