@@ -1,4 +1,9 @@
 
+0.3.0 / 2014-07-02
+==================
+
+ * Added an include file for easier building shell scripts that invoke forever.
+
 0.2.0 / 2014-04-24
 ==================
 
