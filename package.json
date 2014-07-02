@@ -25,13 +25,14 @@
   },
   "homepage": "https://github.com/Wiredcraft/carcass-program",
   "dependencies": {
-    "carcass": "~0.11.0",
-    "carcass-config": "~0.2.0",
+    "carcass": "0.11.4",
+    "carcass-config": "0.2.2",
     "commander": "2.x",
-    "debug": "*"
+    "debug": "1.x"
   },
   "devDependencies": {
     "body-parser": "latest",
+    "build-http-error": "latest",
     "carcass-monitor": "latest",
     "errorhandler": "latest",
     "express": "latest",

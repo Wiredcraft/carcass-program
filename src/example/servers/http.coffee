@@ -6,6 +6,7 @@ express = require('express')
 logger = require('morgan')
 bodyParser = require('body-parser')
 errorhandler = require('errorhandler')
+httpError = require('build-http-error')
 
 ###*
  * HTTP server.
@@ -50,6 +51,9 @@ server.app = ->
 
     # Just an example.
     app.get('/ping', (req, res) -> res.json('pong'))
+
+    # Catchall.
+    app.get('*', (req, res, next) -> next(httpError(404)))
 
     # Error handler.
     app.use(errorhandler())

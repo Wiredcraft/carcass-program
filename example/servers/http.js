@@ -1,4 +1,4 @@
-var bodyParser, debug, errorhandler, express, http, lib, logger, server;
+var bodyParser, debug, errorhandler, express, http, httpError, lib, logger, server;
 
 debug = require('debug')('carcass:server:http');
 
@@ -13,6 +13,8 @@ logger = require('morgan');
 bodyParser = require('body-parser');
 
 errorhandler = require('errorhandler');
+
+httpError = require('build-http-error');
 
 
 /**
@@ -63,6 +65,9 @@ server.app = function() {
   app.use(bodyParser());
   app.get('/ping', function(req, res) {
     return res.json('pong');
+  });
+  app.get('*', function(req, res, next) {
+    return next(httpError(404));
   });
   app.use(errorhandler());
   return app;

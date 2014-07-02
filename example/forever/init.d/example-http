@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+DIR=`dirname $0`
+
+# Configs.
+# Defaults are commented out.
+# ENV="NODE_ENV=production DEBUG=carcass:*"
+# PID_DIR=~/.forever/pids
+# LOG_DIR=~/.forever
+# USERNAME=`whoami`
+# COMMAND=node
+SOURCE_DIR="`dirname $DIR`/programs"
+SCRIPT="http.js"
+NAME=`basename $0`
+
+# Include.
+. ${DIR}/carcass-forever
+
+# Run.
+ARGS="$1 $2"
+run $ARGS
