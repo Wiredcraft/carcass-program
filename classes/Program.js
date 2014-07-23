@@ -157,7 +157,7 @@ module.exports = Program = (function() {
       return done();
     }
     if (((_ref = this.command()) != null ? _ref.config : void 0) != null) {
-      manager.source(command.config);
+      manager.source(this.command().config);
     }
     if ((_ref1 = this.script()) != null) {
       if (typeof _ref1.configManager === "function") {
