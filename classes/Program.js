@@ -151,17 +151,18 @@ module.exports = Program = (function() {
    */
 
   Program.prototype.bootConfig = function(done) {
-    var manager, _ref, _ref1;
+    var command, manager, _ref;
     manager = this.configManager();
     if (manager == null) {
       return done();
     }
-    if (((_ref = this.command()) != null ? _ref.config : void 0) != null) {
+    command = this.command();
+    if ((command != null ? command.config : void 0) != null) {
       manager.source(command.config);
     }
-    if ((_ref1 = this.script()) != null) {
-      if (typeof _ref1.configManager === "function") {
-        _ref1.configManager(manager);
+    if ((_ref = this.script()) != null) {
+      if (typeof _ref.configManager === "function") {
+        _ref.configManager(manager);
       }
     }
     manager.reload(done);
