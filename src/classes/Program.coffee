@@ -118,7 +118,7 @@ module.exports = class Program
         manager = @configManager()
         return done() if not manager?
         # The command can specify an extra config file.
-        manager.source(command.config) if @command()?.config?
+        manager.source(@command().config) if @command()?.config?
         # Inherit config manager.
         @script()?.configManager?(manager)
         # Load config.
