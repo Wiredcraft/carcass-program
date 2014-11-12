@@ -1,4 +1,11 @@
 
+0.4.0 / 2014-11-12
+==================
+
+  * Updated modules. Added gulp coverage.
+  * Fixed license.
+  * Fixed the shell script for recent forever changes.
+
 0.3.1 / 2014-07-23
 ==================
 
