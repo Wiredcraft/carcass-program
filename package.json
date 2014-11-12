@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/Wiredcraft/carcass-program",
   "dependencies": {
-    "carcass": "0.11.5",
+    "carcass": "0.12.0",
     "carcass-config": "0.2.2",
     "commander": "2.x",
-    "debug": "1.x"
+    "debug": "2.x"
   },
   "devDependencies": {
     "body-parser": "latest",
@@ -39,6 +39,7 @@
     "gulp": "latest",
     "gulp-coffee": "latest",
     "gulp-coffeelint": "latest",
+    "gulp-coverage": "latest",
     "gulp-jshint": "latest",
     "gulp-mocha": "latest",
     "gulp-util": "latest",
