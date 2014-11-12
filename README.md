@@ -4,7 +4,7 @@ A simple wrap of [commander.js](https://github.com/visionmedia/commander.js), pl
 
 ## Init scripts
 
-* For `forever` to recognize the process, you need to prepare a shell script for each of your programs.
+* For `forever` to recognize the process, you need to prepare a JS script for each of your programs.
 * For convenience, we prepared an include file for the shell scripts.
 * See `/example/forever` for examples.
 

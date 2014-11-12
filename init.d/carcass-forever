@@ -38,7 +38,9 @@ start() {
 #
 stop() {
   echo "Stopping"
+  pushd $SOURCE_DIR
   as_user "forever stop $SCRIPT"
+  popd
 }
 
 #
